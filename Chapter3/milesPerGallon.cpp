@@ -42,7 +42,7 @@ int main()
     MGP = (milesOnFullTank/numberOfGallons);
 
     //Displaying Result 
-    cout << "--------------" << endl;
-    cout << "Miles per gallon: " << MGP;
-    cout << "--------------" << endl;
+    cout << "--------------------------" << endl;
+    cout << "Miles per gallon: " << MGP << endl;;
+    cout << "--------------------------" << endl;
 }
