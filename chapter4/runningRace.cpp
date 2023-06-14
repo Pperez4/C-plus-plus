@@ -11,6 +11,7 @@ Input Validation: Only accept positive numbers for the times.
 //------------------------------
 #include <iostream>
 #include <iomanip>
+#include <string>
 //------------------------------
 // namespace statement
 //------------------------------
@@ -22,31 +23,96 @@ using namespace std;
 int main()
 {
     //Variables for runners names and time
-    string runnerOneName;   double runnerOneTime;
-    string runnerTwoName;   double runnerTwoTime;
-    string runnerThreeName; double runnerThreeTime;
+    string oneName;   double oneTime;
+    string twoName;   double twoTime;
+    string threeName; double threeTime;
     
     //Variables to store first second and third
     string first;
     string second;
     string third;
 
-    //Prompting user for the names and times 
-    cout << "Enter runner number one name: ";
-    getline(cin, runnerOneName);
-    cout << "Time it took runner number one to finish a race: ";
-    cin >> runnerOneTime;
+    //Prompting user for the names 
+    cout << "Name 1: "; 
+    getline(cin, oneName); 
+    cout << "Name 2: ";
+    getline(cin, twoName);  
+    cout << "Name 3: ";
+    getline(cin, threeName);
+    //Prompting user for the times
+    cout << "Time it took runner 1 to finish the race: ";
+    cin >> oneTime;
+    cout << "Time it took runner 2 to finish the race: ";
+    cin >> twoTime;
+    cout << "Time it took runner 3 to finish a race: ";
+    cin >> threeTime;
 
-    cout << "Enter runner number two name: ";
-    getline(cin, runnerTwoName);
-    cout << "Time it took runner number two to finish a race: ";
-    cin >> runnerTwoTime;
+//Determing first place 
+if (oneTime < twoTime && oneTime < threeTime)
+{
+    first = oneName;
+    cout << "First place: " << first << endl;
+}
+else if (twoTime < oneTime && twoTime < threeTime)
+{
+    first = twoName;
+    cout << "First place: " << first << endl;
+}
+else if (threeTime < oneTime && threeTime < twoTime)
+{
+    first = threeName;
+    cout << "First place: " << first << endl;
+}
 
-    cout << "Enter runner number one name: ";
-    getline(cin, runnerThreeName);
-    cout << "Time it took runner number three to finish a race: ";
-    cin >> runnerThreeTime;
+//Determing second place 
+if (oneTime > twoTime && oneTime < threeTime || oneTime < twoTime && oneTime > threeTime)
+{
+    second = oneName;
+    cout << "Second place: " << second << endl;
+}
+else if (twoTime > oneTime && twoTime < threeTime || twoTime < oneTime && twoTime > threeTime)
+{
+    second = twoName;
+    cout << "Second place: " << second << endl;
+}
+else if (threeTime > oneTime && threeTime < twoTime || threeTime < oneTime && threeTime > twoTime)
+{
+    second = threeTime;
+    cout << "Second place: " << second << endl;
+}
 
+//Determing third place 
+if (oneTime > twoTime && oneTime > threeTime)
+{
+    third = oneName;
+    cout << "Third place: " << third << endl;
+}
+else if (twoTime > oneTime && twoTime > threeTime)
+{
+    third = twoName;
+    cout << "Third place: " << third << endl;
+}
+else if (threeTime > twoTime && threeTime > oneTime)
+{
+    third = threeName;
+    cout << "Third place: " << third << endl;
+}
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+
+    
+    
+    
 
 
 }
