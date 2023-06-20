@@ -34,7 +34,7 @@ int main()
    int numberOfDimes;
    int numberOfQuarters;
   //For calculation
-  int dollarAmount;
+  double dollarAmount;
 
    //Propting User
    cout << "How many pennies: ";
@@ -59,11 +59,11 @@ dollarAmount = (numberOfPennies * CENTS_VALUE_PENNIE) + (numberOfNickels * CENTS
    (numberOfDimes * CENTS_VALUE_DIME) + (numberOfQuarters * CENTS_VALUE_QUARTER);
 
 //Determing in dollarAmount quantity is a dollar 
-    if (dollarAmount == 1)
+    if (dollarAmount == 1.00)
         cout << "Congrat's that is equivalent to $1 dollar." << endl;
-    else if(dollarAmount < 1)
+    else if(dollarAmount < 1.00)
         cout << "That is less than  $1 dollar." << endl;
-    else if ( dollarAmount > 1)
+    else if ( dollarAmount > 1.00)
         cout << "That is more than $1 dollar." << endl;
    
 }
