@@ -1,4 +1,0 @@
-? I need to finish 
-* mobileServicePart2
-* spectralAnalysis
-* daysInMonth
