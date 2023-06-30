@@ -53,6 +53,7 @@ int main()
               multiplication = 3,
               division = 4,
               quit = 5;
+    cout << fixed << showpoint << setprecision(2);
     do
     {
         //Display Menu 
@@ -67,15 +68,18 @@ int main()
         cout << "Enter your choice: ";
         cin >> choice;
 
-        while (choice < addition || choice > quit)
+    //To validate user input
+        while (choice < 1 || choice > 5)
         {
-            cout << "Please enter a value in the menu\n";
-            cout << "Enter your choice: ";
+            cout << "Invalid value\n";
+            cout << "Enter a choice from the menu: \n";
             cin >> choice;
         }
         
+        if(choice != quit)
+        {
             switch (choice)
-            {
+            { 
                 case addition:
                     int sum;
                     sum = x + y;
@@ -163,9 +167,9 @@ int main()
             default:
                 break;
         }
-        
+     }   
     cin.clear();
-    cin.ignore(numeric_limits<streamsize>::max());
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     } while (choice != quit);
     
 

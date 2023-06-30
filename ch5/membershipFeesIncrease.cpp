@@ -40,20 +40,10 @@ int main()
         cout << "----------------------------\n";
         // i will iterate 6 times one for each year
         cout << "Year: " << i << endl;
-        increase = 0.0; //Initialize acumulator 
         cout << fixed << showpoint << setprecision(2);
-
-        for (int j = 1; j <= YEARS; j++)
-        {
-            //The increase  equal 2500.00 (Current price) * 0.04 (annual increase rate)
-            increase = CURRENT_CHARGE * INCREASE_RATE;
-            //We add the increase to the current price
-            CURRENT_CHARGE = CURRENT_CHARGE + increase;
-            //j is = CURRENT_CHARGE so it can iterate 6 times 
-            j = CURRENT_CHARGE;
-            cout << "New Charge: $" << CURRENT_CHARGE << endl;
-            cout << "----------------------------\n";
-        }
+        cout << "Charge: $" << CURRENT_CHARGE << endl;
+        CURRENT_CHARGE += CURRENT_CHARGE * INCREASE_RATE;
+        cout << endl;
     }
     
 
