@@ -72,7 +72,7 @@ while (numberOfYears < 1)
 //Do not accept negative numbers for the monthly rainfall.
 //------------------------------------------------------
 
-            while (inchesOfRainfall < 0)
+            while (inchesOfRainfall < 0.0)
             {
                 cout << "The program does not accept negative numbers\n" 
                      << "for the monthly rainfall.\n";
