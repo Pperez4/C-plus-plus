@@ -59,6 +59,8 @@ int main()
   cin >> studentName;
 
 // the string in studentName will be assigned to last and first
+// this variables are initialized outside of the loop in order to ensure
+// the values are retained and can be updated throughout the loop
   last = first = studentName;
 
 for (int i = 2; i <= numberOfStudents; i++)
