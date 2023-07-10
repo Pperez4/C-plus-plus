@@ -1,0 +1,9 @@
+-----------------------------------------------------
+		Savings Account Report.
+-----------------------------------------------------
+Starting Balance: 	$1000.00
+Ending Balance: 	$11228.17
+Interest Earned: 	$221.17
+Total Deposits: 2 	Amount: $10019.00
+Total Withdrawns: 2	Amount: $12.00
+-----------------------------------------------------
